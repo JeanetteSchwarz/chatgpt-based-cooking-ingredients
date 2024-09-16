@@ -1,6 +1,6 @@
 package service;
 
-import model.Ingredient;
+
 import model.OpenAIRequest;
 import model.OpenAiMessage;
 import model.OpenAiResponse;

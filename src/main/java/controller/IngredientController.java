@@ -2,7 +2,6 @@ package controller;
 
 
 import lombok.RequiredArgsConstructor;
-import model.Ingredient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
