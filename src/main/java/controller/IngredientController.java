@@ -1,23 +1,26 @@
-package com.example.chatgptbasedcookingingredients;
+package controller;
 
 
 import lombok.RequiredArgsConstructor;
+import model.Ingredient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import service.OpenAIService;
 
 @RestController
-@RequestMapping("/ingredients")
+@RequestMapping("/api/ingredients")
 @RequiredArgsConstructor
 public class IngredientController {
 
-    @PostMapping
-    String categorizeIngredient(@RequestBody String ingredient) {
+    private final OpenAIService service;
 
         // TODO: This should return "vegan", "vegetarian" or "regular" depending on the ingredient.
+    @PostMapping
+    public String categorizeIngredient(@RequestBody String ingredient) {
 
-        return "vegan";
+        return service.categorizeIngredient(ingredient);
     }
 
 }
