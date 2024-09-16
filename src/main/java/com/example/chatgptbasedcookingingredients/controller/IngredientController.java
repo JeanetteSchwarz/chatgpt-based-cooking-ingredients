@@ -1,4 +1,4 @@
-package controller;
+package com.example.chatgptbasedcookingingredients.controller;
 
 
 import lombok.RequiredArgsConstructor;
@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import service.OpenAIService;
+import com.example.chatgptbasedcookingingredients.service.OpenAIService;
 
 @RestController
 @RequestMapping("/api/ingredients")

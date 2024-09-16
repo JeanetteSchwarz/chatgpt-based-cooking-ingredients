@@ -1,9 +1,9 @@
-package service;
+package com.example.chatgptbasedcookingingredients.service;
 
 
-import model.OpenAIRequest;
-import model.OpenAiMessage;
-import model.OpenAiResponse;
+import com.example.chatgptbasedcookingingredients.model.OpenAIRequest;
+import com.example.chatgptbasedcookingingredients.model.OpenAiMessage;
+import com.example.chatgptbasedcookingingredients.model.OpenAiResponse;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
@@ -19,7 +19,7 @@ public class OpenAIService {
     public OpenAIService(@Value("${BASE_URL}") String baseUrl,
                          @Value("${AUTH_KEY}") String key) {
         client = RestClient.builder()
-                .defaultHeader("Authorization", "Bearer " +key)
+                .defaultHeader("Authorization", "Bearer " + key)
                 .baseUrl(baseUrl)
                 .build();
     }
